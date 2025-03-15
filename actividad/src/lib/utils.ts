@@ -8,14 +8,13 @@ export function add(body:any,d:any){
     data.set(result);
 }
 export function update(id:any,body:any,d:any){
-    let i;
-    d.forEach((e, index) => {
-        if(e.id===id){
+    let i:any;
+    d.forEach((e:any, index:any) => {
+        if(e.id==id){
             body.id=e.id;
             i = index;
         }
     });
     d[i] = body;
-    console.log(d);
     data.set(d);
 }
