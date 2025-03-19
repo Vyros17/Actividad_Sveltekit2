@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { goto } from "$app/navigation";
     export let data;
     import { del } from "$lib/utils";

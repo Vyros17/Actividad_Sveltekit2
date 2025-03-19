@@ -20,15 +20,20 @@
         body.lastName = value.lastName;
         body.email = value.email;
     }
+
+    function fieldsAreFull(){
+        return (body.email.length>0 && body.lastName.length>0 && body.name.length>0);
+    }
+
     function handleAdd() {
         body.id = $data[$data.length - 1].id;
         body.id++;
-        if(body.email.length>0 && body.lastName.length>0 && body.name.length>0){
+        if(fieldsAreFull()){
             add(body, $data);
         }
     }
     function handleUpdate() {
-        if(body.email.length>0 && body.lastName.length>0 && body.name.length>0){
+        if(fieldsAreFull()){
             update(id, body, $data);
         }
     }
